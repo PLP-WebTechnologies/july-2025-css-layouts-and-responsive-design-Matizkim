@@ -1,0 +1,110 @@
+/* Base styles and resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Grid layout for main body */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Main content */
+.main-content {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Flexbox: cards section */
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #0077cc;
+  color: white;
+  flex: 1 1 30%;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Article section */
+.article {
+  padding: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
